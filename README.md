@@ -10,12 +10,12 @@
 **Continuous Delivery (CD):** This extends CI by automatically deploying all code changes to a testing or staging environment after the build stage. The aim is to have a codebase that is always in a deployable state, allowing teams to release new changes to customers quickly and safely at any time.
 
 **Continuous Deployment (another CD):** This goes one step further than Continuous Delivery. Every change that passes through all the stages of your production pipeline is released to customers without manual intervention. The difference between Continuous Delivery and Continuous Deployment is mainly the automatic release to production.
-    ![preview](Images/jenkins2.png)
 
-    ![preview](Images/jenkins3.png)
+![preview](Images/jenkins2.png)
+![preview](Images/jenkins3.png)
 
 ## Feature of Jenkins
-    ![preview](Images/jenkins4.png)
+ ![preview](Images/jenkins4.png)
 
 ### Installing Jenkins in EC2 Instance.
 * Create an EC2 instance of Ubuntu flavour(linux OS).In security groups allow 22 and 8080.
@@ -46,7 +46,7 @@
    
     ![preview](Images/jenkins12.png)
 
-* Create a user.
+* Create an admin user.
   
     ![preview](Images/jenkins13.png)
     ![preview](Images/jenkins14.png)
