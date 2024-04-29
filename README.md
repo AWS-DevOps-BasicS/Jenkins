@@ -69,19 +69,19 @@ CI/CD Tools:
 ### Installing Plugins
 *  Going to manage jenkins -->Plugins
   
-  ![preview](images/jenkins29.png)
+  ![preview](Images/jenkins29.png)
 
 * In plugins --> Available plugins --> search for plugin you need.Now click on install
   
-  ![preview](images/jenkins30.png)
+  ![preview](Images/jenkins30.png)
 
 * After installing the Jenkins page will restart again, so login and see in installed plugins.
   
-  ![preview](images/jenkins27.png)
+  ![preview](Images/jenkins27.png)
 
 * Now manage Jenkins --> system --> Declarative pipeline fill the details
  
- ![preview](images/jenkins28.png)
+ ![preview](Images/jenkins28.png)
 
 ### Terms in Jenkins
 * Job/Project: This is set of steps configured as one unit (Job/Project)
@@ -91,14 +91,14 @@ CI/CD Tools:
 * Jenkins stores everything in jenkins home directory.
 * If we click on  New item then we can see what are the option jenkins is providing for jobs
   
-  ![preview](images/jenkins18.png)
+  ![preview](Images/jenkins18.png)
 
 ### Jenkins – Free Style Project
 * This project is created with Jenkins UI.
 * Give name of the job and select freestyle project. Then click on ok.
   
-  ![preview](images/jenkins19.png)
-  ![preview](images/jenkins20.png)
+  ![preview](Images/jenkins19.png)
+  ![preview](Images/jenkins20.png)
 * The Sections are
     * General: Give metadata and basic settings
     * Source Code Management: Where the SCM (git details)
@@ -108,15 +108,15 @@ CI/CD Tools:
     * Post Build Actions: After success or failure what has to be done
 * Create a jenkins free style project (UI/Classic) which shows the current user and environment variables.
   
-  ![preview](images/jenkins21.png)
+  ![preview](Images/jenkins21.png)
 
 * Select the build steps that you want to perform. For showing current user and env variable we have to select execute shell. Then give the commands and then save.
    
-   ![preview](images/jenkins22.png)
-   ![preview](images/jenkins23.png)
-   ![preview](images/jenkins24.png)
-   ![preview](images/jenkins25.png)
-   ![preview](images/jenkins26.png)
+   ![preview](Images/jenkins22.png)
+   ![preview](Images/jenkins23.png)
+   ![preview](Images/jenkins24.png)
+   ![preview](Images/jenkins25.png)
+   ![preview](Images/jenkins26.png)
 
 * [Refer here](https://directdevops.blog/2023/11/22/devops-classroom-notes-22-nov-2023/) for reference exploring free-style project.
  
@@ -124,7 +124,7 @@ CI/CD Tools:
 
 * Jenkins uses a Master-Slave architecture to manage distributed builds. 
   
-  ![preview](images/jenkins17.png)
+  ![preview](Images/jenkins17.png)
 
 #### Jenkins Master
 
@@ -149,20 +149,20 @@ Slaves can run on a variety of operating systems.
 * Install java-17 on the node because java-17 is required for jenkins to connect as node.
 * I am adding docker server as agent in Jenkins. So have to install docker  in that server.
   
-  ![preview](images/jenkins31.png)
-  ![preview](images/jenkins32.png)
-  ![preview](images/jenkins33.png)
-  ![preview](images/jenkins34.png)
+  ![preview](Images/jenkins31.png)
+  ![preview](Images/jenkins32.png)
+  ![preview](Images/jenkins33.png)
+  ![preview](Images/jenkins34.png)
 
 * We have to select the credentials or else click on add to create one.
   
-  ![preview](images/jenkins35.png)
-  ![preview](images/jenkins36.png)
-  ![preview](images/jenkins37.png)
+  ![preview](Images/jenkins35.png)
+  ![preview](Images/jenkins36.png)
+  ![preview](Images/jenkins37.png)
 
 * After setting up we can see the node is online.
   
-  ![preview](images/jenkins38.png)
+  ![preview](Images/jenkins38.png)
 
 ### Pipeline as code
 
@@ -184,34 +184,34 @@ Slaves can run on a variety of operating systems.
 #### Declarative Pipeline
 * [Pipeline syntax](https://www.jenkins.io/doc/book/pipeline/syntax/) to write a declarative pipeline.
   
-  ![preview](images/jenkins46.webp)
+  ![preview](Images/jenkins46.webp)
 * Click on new item --> Name --> select pipeline --> ok
   
- ![preview](images/jenkins39.png)
+ ![preview](Images/jenkins39.png)
 
 * In general we are using github project we have to mention the url.
   
- ![preview](images/jenkins40.png)
+ ![preview](Images/jenkins40.png)
 
 * In build trigger we can mention when the pipeline have to run.
  
- ![preview](images/jenkins41.png)
+ ![preview](Images/jenkins41.png)
  
 * In advanced project options we have two options   
     1. pipeline script
     2. pipeline script from SCM
 
- ![preview](images/jenkins42.png)
+ ![preview](Images/jenkins42.png)
 
 * First we will try pipeline script
   
-  ![preview](images/jenkins43.png)
+  ![preview](Images/jenkins43.png)
 
 * If we click on pipeline syntax.
 * Snippet Generator will provide the code that you select. For example I selected the git then it will provide the syntax
   
-  ![preview](images/jenkins44.png)
-  ![preview](images/jenkins45.png)
+  ![preview](Images/jenkins44.png)
+  ![preview](Images/jenkins45.png)
   
 * We can copy and use in pipeline.
   
@@ -246,16 +246,16 @@ pipeline {
 }
 ```
 
-![preview](images/jenkins46.png)
+![preview](Images/jenkins46.png)
 
 * Now build the pipeline and wait for the pipeline to run.
 
-  ![preview](images/jenkins47.png)
-  ![preview](images/jenkins48.png) 
-  ![preview](images/jenkins49.png)
+  ![preview](Images/jenkins47.png)
+  ![preview](Images/jenkins48.png) 
+  ![preview](Images/jenkins49.png)
 
 *  We can see the details of our jenkins in server level in /var/lib/jenkins
-  ![preview](images/jenkins50.png)
+  ![preview](Images/jenkins50.png)
  
 * In workspace details of our jobs will be present.
 * In above pipeline I have used docker plugin, without docker plugin we have to give the command directly.
@@ -290,4 +290,4 @@ pipeline {
 ```
 * After build 
 
-  ![preview](images/jenkins51.png)
+  ![preview](Images/jenkins51.png)
