@@ -159,7 +159,7 @@ Slaves can run on a variety of operating systems.
   ![preview](Images/jenkins35.png)
   ![preview](Images/jenkins36.png)
 
-*  Enter the private of the node server.
+*  Enter the private ip of the node server.
   
   ![preview](Images/jenkins37.png)
 
