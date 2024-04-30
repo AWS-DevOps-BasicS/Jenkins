@@ -158,6 +158,9 @@ Slaves can run on a variety of operating systems.
   
   ![preview](Images/jenkins35.png)
   ![preview](Images/jenkins36.png)
+
+*  Enter the private of the node server.
+  
   ![preview](Images/jenkins37.png)
 
 * After setting up we can see the node is online.
@@ -291,3 +294,40 @@ pipeline {
 * After build 
 
   ![preview](Images/jenkins51.png)
+
+* If we select Pipeline script from SCM.
+  
+  ![preview](Images/jenkins52.png)
+  ![preview](Images/jenkins53.png)
+
+* Then click on Build Now. Your job will run.
+
+
+### Day builds and Night Builds
+* Day builds are the builds that are configured to give the feedback about the commits submitted by developers during their work hours. In the day builds, we need to configure
+  * building the package
+  * executing all the unit tests and publishing results
+  * publish the code quality report
+  * The tests which we run over in the day builds should be minimal and give the feedback whether the system is working correctly or not
+  * If the build fails send alert to all the developers w.r.t failure
+  * In Some cases for every day build we might also configure System Tests which means creating the environment
+  * Failure of day build is normal and we can expect the fix by next build cycle.
+* Example Day build configurations:
+  * Build for every change submitted by developer
+  * Build for every one hour
+* Night build are the builds that are executed once in a day (in most of the cases) which gives feedback of all the work done by your dev team during the day. In night builds we configure
+building the package
+  * executing all the unit tests
+  * executing all the automated tests from QA
+  * publish the code quality report
+  * Publish the artifact to some repository or a shared folder
+  * The tests that should be running over here are extensive to test all the possible features.
+  * Build failure over here is critical and it needs to be addressed immedietly.
+  * Your customer release will be cutout after a night build and tests & approval from QA
+* Example Night build configurations
+   * Build on every weekday at 01:00 AM
+
+### Stash and Unstash in Jenkins
+* **stash:** The stash step allows you to save specific files or directories from your workspace into a temporary storage area provided by Jenkins. These stashed files can then be retrieved later by other stages.
+* **unstash:** The unstash step is used to retrieve files that were previously stashed in a different stage. It fetches the stashed files from the Jenkins storage and places them back into the current workspace for further processing.
+* [Refer here](https://medium.com/@rishabhv4711/leveraging-stash-and-unstash-in-jenkins-pipelines-for-continuous-delivery-6be23b8bad0b) for detailed explanation and use case of stash and unstash.
